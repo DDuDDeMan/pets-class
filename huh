@@ -1,0 +1,21 @@
+class Pet:
+  def __init__(self, name, type, age):
+      self.name = name
+      self.type = type
+      self.age = age
+
+num_of_pets = int(input("Enter the number of pets: "))
+pets = []  # create an empty list to hold the pet objects
+
+for i in range(num_of_pets):
+  name = input(f"Enter the name of the pet {i+1}: ")
+  type = input(f"Enter the type of the pet {i+1}: ")
+  age = int(input(f"Enter the age of the pet {i+1}: "))
+  pet = Pet(name, type, age)
+  pets.append(pet)
+
+# Displaying pet information in a column
+print("\nPet Information:")
+print("{:<15} {:<15} {:<15}".format("Name", "Type", "Age"))
+for pet in pets:
+  print("{:<15} {:<15} {:<15}".format(pet.name, pet.type, pet.age))#я взял вывод из интернета НО я разабрался как он работает
